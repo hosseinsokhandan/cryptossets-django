@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cryptossets - Hossein Sokhandan</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/STVC.svg/220px-STVC.svg.png">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="/kucoin" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/STVC.svg/220px-STVC.svg.png"
+                        alt="" style="height: 100px;">
+                    Cryptossets
+                </a>
+                <div style="direction: rtl;">
+                    {% if request.user.is_authenticated %}
+                    <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
+                    <a class="btn btn-success" href="{% url 'profile' %}">Profile</a>
+                    {% else %}
+                    <a class="btn btn-primary" href="{% url 'signup' %}">SignUp</a>
+                    <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid">
+                    <h1 class="display-6 fw-bold">What is Cryptossets?</h1>
+                    <p class="col-md-12 fs-4">
+                        Cryptossets is a project done by Hossein Sokhandan in ProgrammingSystems course taken in 2021.
+                        This project is open-source and you can explore its code in github in this <a
+                            href="https://github.com/hosseinsokhandan/cryptossets" target="_blank"
+                            rel="noopener noreferrer">repo</a>. Cryptossets will get your api keys of popular exchanges
+                        and give you a summary of what you have been buying/selling so far. The value of Cryptossets is
+                        that you can measure your trades, "you can progress what you don't measure.".
+                    </p>
+                </div>
+            </div>
+
+            <h2>Select Your Exchange</h2>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+
+                        <a href="/kucoin">
+                            <img src="https://assets.staticimg.com/cms/media/1lB3PkckFDyfxz6VudCEACBeRRBi6sQQ7DDjz0yWM.svg"
+                                alt="" height="50">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+
+                        <a href="/coinex">
+                            <img src="https://www.coinex.com/assets/img/logo-black.png" alt="" height="50">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="pt-3 mt-4 text-muted border-top">
+                &copy; 2021
+            </footer>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

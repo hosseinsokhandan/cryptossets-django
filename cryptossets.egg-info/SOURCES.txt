@@ -1,0 +1,7 @@
+README.rst
+setup.py
+cryptossets/__init__.py
+cryptossets.egg-info/PKG-INFO
+cryptossets.egg-info/SOURCES.txt
+cryptossets.egg-info/dependency_links.txt
+cryptossets.egg-info/top_level.txt

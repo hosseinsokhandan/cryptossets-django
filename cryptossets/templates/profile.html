@@ -1,0 +1,40 @@
+{% load crispy_forms_tags %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/STVC.svg/220px-STVC.svg.png">
+
+    <title>Register</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form class="form-signin" method="post" action="{% url 'profile' %}">
+        <img class="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/STVC.svg/220px-STVC.svg.png"
+            alt="" width="150" height="150">
+
+        {% csrf_token %}
+        <h1 class="h3 mb-3 font-weight-normal">Profile</h1>
+        {{form|crispy}}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+
+        <p class="mt-5 mb-3 ">
+            <a href="/">Home</a>
+        </p>
+    </form>
+</body>
+
+</html>
